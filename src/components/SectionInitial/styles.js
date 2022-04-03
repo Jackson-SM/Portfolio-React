@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 export const SectionContent = styled.section`
   display: flex;
-  padding: 20px;
-  gap: 5rem;
+  gap: 3rem;
   align-items: center;
   justify-content: center;
 
@@ -21,7 +20,7 @@ export const Illustration = styled.div`
   width: 450px;
   flex: none;
 
-  background: url('/initial.svg');
+  background: url(${props => props.avatar});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -32,10 +31,22 @@ export const Illustration = styled.div`
   }
 `;
 
+export const IllustrationAvatar = styled(Illustration)`
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+
+  @media(max-width: 550px){
+    height: 200px;
+    width: 200px;
+  }
+`;
+
 export const ContainerApresentation = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
+  width: 500px;
 
   @media(max-width: 900px){
     align-items: center;
@@ -56,6 +67,7 @@ export const ContainerApresentation = styled.div`
   h2 {
     font-size: 20px;
     color: ${props => props.theme.colors.secundary};
+    display: block;
 
     @media(max-width: 900px){
       font-size: 16px;

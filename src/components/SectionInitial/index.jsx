@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import ButtonMore from '../ButtonMore';
 
-import { SectionContent, Illustration, ContainerApresentation } from './styles';
-import { FaReact } from 'react-icons/fa';
+import { SectionContent, IllustrationAvatar, ContainerApresentation } from './styles';
+
+import { ApiGithubContext } from '../../contexts/apiGithub';
 
 export default function SectionInitial() {
+
+  const { userGithub } = useContext(ApiGithubContext);
+
   return (
     <SectionContent>
-      <Illustration>
-      </Illustration>
+      <IllustrationAvatar avatar={userGithub.avatar_url}>
+      </IllustrationAvatar>
       <ContainerApresentation>
-        <h1>Software Design React</h1>
-        <h2>Project with a React pinned content purpose</h2>
-        <p>Software made with a modern and current design for more user comfort with our interface.</p>
+        <h1>{userGithub.name}</h1>
+        <h2>{userGithub.bio}</h2>
+        <p>Meu objetivo é me inserir na profissão de programador<br></br> e adquirir mais conhecimento, construindo um<br></br> bom ambiente para trabalhos em equipe.</p>
         <ButtonMore></ButtonMore>
       </ContainerApresentation>
     </SectionContent>
