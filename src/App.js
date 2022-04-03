@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from 'react';
+
+import Home from './templates/Home';
+import About from './templates/About';
+
+import Header from './components/Header';
+
+
+import light from './styles/themes/light';
+import dark from './styles/themes/dark';
+
+import { Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+
+import useSaveTheme from './utils/useSaveTheme';
+
+import GlobalStyle from './styles/global';
 
 function App() {
+
+  const [theme,setTheme] = useSaveTheme('theme', light);
+
+  const toggleTheme = () => {
+    setTheme(theme.title === 'light' ? dark : light);
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Header toggleTheme={toggleTheme} />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+      </Routes>
+      </ThemeProvider>
+    </>
   );
 }
 
