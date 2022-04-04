@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
+export const Button = styled.a`
   align-self: start;
-  padding: 15px 70px;
+  padding: 12px 60px;
   border-radius: 3px;
   outline: none;
   border: none;
@@ -11,6 +11,7 @@ export const Button = styled.button`
   border: 2px solid ${props => props.theme.colors.text};
   color: ${props => props.theme.colors.text};
   margin-top: 35px;
+  text-decoration: none;
 
   transition: all ease 200ms;
 

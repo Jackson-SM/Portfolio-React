@@ -2,24 +2,20 @@ import React, { useContext } from 'react';
 
 import { Card, ContentCard, ContentImage, ContentTitle, Title, TitleMini } from './styles';
 
-import { AiFillHtml5 } from 'react-icons/ai';
-import { IoLogoXing } from 'react-icons/io';
-import { FaReact } from 'react-icons/fa';
-import { SiNintendonetwork } from 'react-icons/si';
-import { FiFilm } from 'react-icons/fi';
+import { AiFillProject } from 'react-icons/ai';
 
 import { ThemeContext } from 'styled-components';
 import ButtonMore from '../ButtonMore';
 
-export default function CardFrameworks({titleCard, titleMini, element}) {
+export default function CardFrameworks({titleCard, titleMini,url}) {
 
   const { title, colors } = useContext(ThemeContext);
 
   return (
-      <Card>
+      <Card href={url} target="_blank">
         <ContentCard>
           <ContentImage>
-            {element}
+            <AiFillProject size={60} color={colors.text}/>
           </ContentImage>
           <ContentTitle>
             <Title>

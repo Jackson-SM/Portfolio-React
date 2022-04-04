@@ -2,11 +2,12 @@ import styled from 'styled-components';
 
 import { lighten } from 'polished';
 
-export const Card = styled.div`
+export const Card = styled.a`
   height: auto;
   width: 280px;
 
   margin: 0 auto;
+  text-decoration: none;
 
   background: ${props => lighten(0.04,props.theme.colors.background)};
   padding: 20px;

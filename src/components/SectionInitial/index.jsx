@@ -17,7 +17,7 @@ export default function SectionInitial() {
         <h1>{userGithub.name}</h1>
         <h2>{userGithub.bio}</h2>
         <p>Meu objetivo é me inserir na profissão de programador<br></br> e adquirir mais conhecimento, construindo um<br></br> bom ambiente para trabalhos em equipe.</p>
-        <ButtonMore></ButtonMore>
+        <ButtonMore link={userGithub.html_url}></ButtonMore>
       </ContainerApresentation>
     </SectionContent>
   );

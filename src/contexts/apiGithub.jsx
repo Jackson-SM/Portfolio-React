@@ -5,20 +5,33 @@ export const ApiGithubContext = createContext();
 export function ApiGithubProvider({children}) {
 
   const [userGithub,setUserGithub] = useState({});
+  const [repositories,setRepositories] = useState([]);
 
   useEffect(() => {
-    async function apiConsumer(){
-      const responseJson = await fetch('https://api.github.com/users/Jackson-SM');
+    async function userGithub(){
+      const responseJson = await fetch('https://api.github.com/users/undeerz');
       const response = await responseJson.json();
       await setUserGithub(response);
     }
-    apiConsumer();
+    userGithub();
   },[])
+
+  useEffect(() => {
+    if(!!userGithub.repos_url) {
+      async function repositoriesGithub(){
+        const responseJson = await fetch(userGithub.repos_url);
+        const response = await responseJson.json();
+        await setRepositories(response);
+      }
+      repositoriesGithub();
+    }
+  },[userGithub])
 
   return (
     <ApiGithubContext.Provider
       value={{
-        userGithub
+        userGithub,
+        repositories
       }}
     >
       {children}
