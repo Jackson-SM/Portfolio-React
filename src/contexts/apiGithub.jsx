@@ -9,7 +9,7 @@ export function ApiGithubProvider({children}) {
 
   useEffect(() => {
     async function userGithub(){
-      const responseJson = await fetch('https://api.github.com/users/undeerz');
+      const responseJson = await fetch('https://api.github.com/users/Jackson-SM');
       const response = await responseJson.json();
       await setUserGithub(response);
     }

@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
-import { lighten } from 'polished';
+import { darken, lighten } from 'polished';
 
 export const Card = styled.a`
-  height: auto;
   width: 280px;
+  height: 200px;
 
   margin: 0 auto;
   text-decoration: none;
 
-  background: ${props => lighten(0.04,props.theme.colors.background)};
+  background: ${props => props.theme.title === 'dark' ? lighten(0.05,props.theme.colors.background) : darken(0.1,"white")};
   padding: 20px;
 
   border-radius: 15px;
@@ -25,6 +25,10 @@ export const Card = styled.a`
   box-shadow: 0 0 20px 1px rgba(40,40,40,0.4);
 
   gap: 1rem;
+
+  h1 {
+    font-size: 20px;
+  }
 
   &:hover {
     transform: scale(1.05);
@@ -52,10 +56,11 @@ export const ContentTitle = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 `;
 
 export const Title = styled.h1`
-  color: ${props => lighten(0.5,props.theme.colors.primary)};
+  color: ${props => lighten(0.25,props.theme.colors.primary)};
   transition: all ease 200ms;
   font-size: 28px;
   display: flex;

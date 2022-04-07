@@ -2,7 +2,7 @@ import { transparentize, lighten, darken } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  height: 60px;
+  height: 50px;
 
   background: ${props => darken(-0.04,props.theme.colors.background)};
   color: ${props => props.theme.colors.text};
@@ -28,10 +28,36 @@ export const ButtonTheme = styled.button`
   gap: 3px;
   
   transition: all ease 200ms;
+
+  
   
   cursor: pointer;
   :hover {
     background: ${props => transparentize(0.8,props.theme.colors.text)};
+  }
+`;
+
+export const MenuResponsive = styled.button`
+  padding: 5px 8px;
+  background: none;
+  border: none;
+  outline: none;
+  border: 2px solid ${props => props.theme.colors.secundary};
+  color: ${props => props.theme.colors.secundary};
+  cursor: pointer;
+  border-radius: 3px;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: ${props => props.theme.colors.text};
+    border-color: ${props => props.theme.colors.text};
+  }
+
+  @media(max-width:800px){
+    display: flex;
   }
 `;
 
@@ -40,6 +66,28 @@ export const ListItem = styled.ul`
   list-style: none;
   gap: 1rem;
   height: 100%;
+
+  @media(max-width:800px){
+    position: absolute;
+    height: auto;
+    top: 50px;
+    left: -100%;
+    width: 100%;
+    background: ${props => darken(-0.04,props.theme.colors.background)};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: left ease 400ms;
+
+    li {
+      height: 50px;
+    }
+
+    &.show {
+      left: 0;
+    }
+  }
 `;
 
 export const ItemContainer = styled.li`
@@ -79,7 +127,7 @@ export const LinkItem = styled.a`
   text-decoration: none;
   color: ${props => props.theme.colors.text};
   font-family: 'Montserrat';
-  font-size: 13px;
+  font-size: 12px;
   height: 100%;
   display: flex;
   align-items: center;

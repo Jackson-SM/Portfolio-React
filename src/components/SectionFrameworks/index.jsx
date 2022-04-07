@@ -15,14 +15,14 @@ export default function SectionFrameworks(){
   return (
     <Section>
       <TitleSection>
-        <Title>Other projects directed by Pinnacle</Title>
-        <Decription>projects in order to adapt to the practices of languages ​​and frameworks.</Decription>
+        <Title>Projetos do github de {userGithub.name}</Title>
+        <Decription>Projetos pessoais com o intuito de estudar e consolidar o conhecimento.</Decription>
       </TitleSection>
       <Container>
         {repositories.map(repo => {
           if(!repo_list_black.includes(repo.name)){
             return (
-              <CardFrameworks titleCard={repo.name} titleMini="React Application" url={repo.html_url} />
+              <CardFrameworks titleCard={repo.name} titleMini={`${repo.language} Application`} url={repo.html_url} key={repo.id}/>
             );
           }
         })}
