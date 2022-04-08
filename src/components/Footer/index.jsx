@@ -1,12 +1,13 @@
-import { Contact, ContactBtn, ContentContact, Foot, GroupLinks, InputContact, LabelContact, Link, Links } from './styles';
+import { Contact, ContentContact, Foot, GroupLinks, InfoFooter, InputContact, InputTextarea, Link, Links, InviteFormContact } from './styles';
 
 import Logo from '../Logo';
 
-import { MdEmail } from 'react-icons/md';
+import { SiMinutemailer } from 'react-icons/si';
 
 export default function Footer() {
   return (
     <Foot>
+      <InfoFooter>
       <Links>
         <GroupLinks>
           <h1>Titulo</h1>
@@ -20,14 +21,20 @@ export default function Footer() {
           <Link href="#">Link</Link>
         </GroupLinks>
       </Links>
-      <Contact>
+      <Contact method="POST">
         <ContentContact>
-          <LabelContact>Contato</LabelContact>
-          <InputContact  type="text" name="contact" placeholder="example@example.com" />
+          <InputContact  type="text" name="name" placeholder="Name" required />
         </ContentContact>
-        <ContactBtn><MdEmail size={18} />Contatar</ContactBtn>
+        <ContentContact>
+          <InputContact  type="text" name="email" placeholder="Email" required />
+        </ContentContact>
+        <ContentContact>
+          <InputTextarea  type="text" name="message" placeholder="Message" required />
+        </ContentContact>
+        <InviteFormContact type="submit">Contact</InviteFormContact>
       </Contact>
       <Logo />
+      </InfoFooter>
     </Foot>
   )
 }

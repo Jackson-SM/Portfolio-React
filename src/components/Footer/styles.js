@@ -5,9 +5,15 @@ export const Foot = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 10px;
+  padding: 40px;
 
   background: ${props => props.theme.title === 'dark' ? lighten(0.05,props.theme.colors.background) : darken(0.15,"white")};
+`;
+
+export const InfoFooter = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 `;
 
 export const Links = styled.div`
@@ -30,12 +36,14 @@ export const Link = styled.a`
   color: ${props => props.theme.colors.secundary};
   transition: all ease 200ms;
 
+  font-size: 13px;
+
   &:hover {
     color: ${props => props.theme.colors.text};
   }
 `;
 
-export const Contact = styled.div`
+export const Contact = styled.form`
   display: flex;
   align-items: center;
   gap: 5px;
@@ -45,44 +53,44 @@ export const Contact = styled.div`
 export const ContentContact = styled.div`
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  overflow: hidden;
 `;
 
 export const InputContact = styled.input`
   font-size: 14px;
-  background: none;
   border: none;
   outline: none;
-  border: 2px solid ${props => props.theme.colors.text};
-  padding: 7px 4px;
   width: 300px;
   color: ${props => props.theme.colors.secundary};
   border-radius: 3px;
-
+  padding: 8px;
+  background: ${props => props.theme.colors.background};
 `;
 
-export const LabelContact = styled.label`
-  padding: 5px;
-`;
-
-export const ContactBtn = styled.button`
-  padding: 7px 20px;
-  border: none;
-  background: none;
+export const InputTextarea = styled.textarea`
+  resize: none;
+  width: 300px;
   outline: none;
-
-  border: 2px solid ${props => props.theme.colors.text};
-  border-radius: 3px;
+  height:80px;
+  background: ${props => props.theme.colors.background};
   color: ${props => props.theme.colors.secundary};
+`;
 
+export const InviteFormContact = styled.button`
+  outline: none;
+  border: none;
+  padding: 10px 50px;
   cursor: pointer;
-
-  display: flex;
-  gap: 5px;
+  border-radius: 3px;
+  background: ${props => props.theme.title === 'dark' ? lighten(0.15,props.theme.colors.background) : darken(0.25,"white")};
+  color: ${props => props.theme.colors.primary};
 
   transition: all ease 200ms;
 
-  &:hover {
+  &:hover{
     color: ${props => props.theme.colors.text};
-    background: ${props => lighten(0.08,props.theme.colors.background)};
+    background: ${props => props.theme.title === 'dark' ? lighten(0.2,props.theme.colors.background) : darken(0.8,"white")};
   }
 `;
