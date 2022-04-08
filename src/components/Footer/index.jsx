@@ -1,8 +1,10 @@
-import { Contact, ContentContact, Foot, GroupLinks, InfoFooter, InputContact, InputTextarea, Link, Links, InviteFormContact } from './styles';
+import { Contact, ContentContact, Foot, GroupLinks, InfoFooter, InputContact, InputTextarea, Link, Links, InviteFormContact, TitleForm, InfoUser, BtnSocial } from './styles';
 
 import Logo from '../Logo';
 
 import { SiMinutemailer } from 'react-icons/si';
+import { AiFillGithub, AiFillInstagram, AiOutlineTwitter, AiFillLinkedin } from 'react-icons/ai';
+import { FaDiscord } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -22,6 +24,7 @@ export default function Footer() {
         </GroupLinks>
       </Links>
       <Contact method="POST">
+        <TitleForm>Form Contact</TitleForm>
         <ContentContact>
           <InputContact  type="text" name="name" placeholder="Name" required />
         </ContentContact>
@@ -35,6 +38,13 @@ export default function Footer() {
       </Contact>
       <Logo />
       </InfoFooter>
+      <InfoUser>
+        <BtnSocial href="#"><AiFillGithub size={35} /></BtnSocial>
+        <BtnSocial href="#"><FaDiscord size={35} /></BtnSocial>
+        <BtnSocial href="#"><AiFillInstagram size={35} /></BtnSocial>
+        <BtnSocial href="#"><AiOutlineTwitter size={35} /></BtnSocial>
+        <BtnSocial href="#"><AiFillLinkedin size={35} /></BtnSocial>
+      </InfoUser>
     </Foot>
   )
 }
