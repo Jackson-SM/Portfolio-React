@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
-import CardFrameworks from '../CardFrameworks';
+import CardRepository from '../CardRepository';
 
 import { Section, Container, TitleSection, Title, Decription } from './styles';
 
 import { ThemeContext } from 'styled-components';
 import { ApiGithubContext } from '../../contexts/apiGithub';
 
-export default function SectionFrameworks(){
+export default function SectionRepository(){
   
   const { title, colors } = useContext(ThemeContext);
   const { userGithub, repositories } = useContext(ApiGithubContext);
@@ -22,7 +22,7 @@ export default function SectionFrameworks(){
         {repositories.map(repo => {
           if(!repo_list_black.includes(repo.name)){
             return (
-              <CardFrameworks titleCard={repo.name} titleMini={`${repo.language} Application`} url={repo.html_url} key={repo.id}/>
+              <CardRepository repo={repo} key={repo.id}/>
             );
           }
         })}

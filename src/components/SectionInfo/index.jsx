@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Section, ContainFrontBack, Container, TitleObjective } from './styles';
 
-import { TitleSection, Title, Decription } from '../SectionFrameworks/styles';
+import { TitleSection, Title, Decription } from '../SectionRepository/styles';
 
 import { AiFillHtml5 } from 'react-icons/ai';
 import { DiCss3, DiJavascript1, DiPhp } from 'react-icons/di';

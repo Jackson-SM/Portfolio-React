@@ -73,3 +73,7 @@ export const TitleMini = styled.span`
   color: ${props => lighten(0.3,props.theme.colors.primary)};
   font-size: 12px;
 `;
+
+export const Languages = styled.span`
+  
+`;

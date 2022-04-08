@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Title } from '../SectionFrameworks/styles';
+import { Title } from '../SectionRepository/styles';
 
 export const Section = styled.section`
   display: flex;

@@ -7,20 +7,20 @@ import { AiFillGithub } from 'react-icons/ai';
 import { ThemeContext } from 'styled-components';
 import ButtonMore from '../ButtonMore';
 
-export default function CardFrameworks({titleCard, titleMini,url}) {
+export default function CardReposity({repo}) {
 
   const { title, colors } = useContext(ThemeContext);
 
   return (
-      <Card href={url} target="_blank">
+      <Card href={repo.html_url} target="_blank">
         <ContentCard>
           <ContentImage>
             <AiFillGithub size={60} color={colors.text}/>
           </ContentImage>
           <ContentTitle>
             <Title>
-              <TitleMini>{titleMini}</TitleMini>
-              {titleCard} 
+              <TitleMini>{`${repo.language} Application`}</TitleMini>
+              {repo.name} 
             </Title>
           </ContentTitle>
         </ContentCard>
