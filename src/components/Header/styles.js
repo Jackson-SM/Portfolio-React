@@ -96,7 +96,7 @@ export const ItemContainer = styled.li`
   z-index: 1;
   
   overflow: hidden;
-  transition: all ease 100ms;
+  transition: all ease 200ms;
 
   ::before {
     content: '';
@@ -112,7 +112,7 @@ export const ItemContainer = styled.li`
 
     background: ${props => props.theme.colors.text};
 
-    transition: all ease 400ms;
+    transition: all ease 200ms;
   }
   :hover {
     background: ${props => lighten(0.01, props.theme.colors.background)};

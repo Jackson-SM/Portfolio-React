@@ -8,7 +8,7 @@ export const Button = styled.a`
   border: none;
   background: none;
   cursor: pointer;
-  border: 2px solid ${props => props.theme.colors.text};
+  border: 1px solid ${props => props.theme.colors.secundary};
   color: ${props => props.theme.colors.text};
   margin-top: 35px;
   text-decoration: none;
@@ -16,7 +16,7 @@ export const Button = styled.a`
   transition: all ease 200ms;
 
   &:hover {
-    background: ${props => props.theme.colors.text};
+    background: ${props => props.theme.colors.secundary};
     color: white;
   }
 

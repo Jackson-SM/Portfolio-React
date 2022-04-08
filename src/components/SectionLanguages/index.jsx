@@ -8,10 +8,11 @@ import { AiFillHtml5 } from 'react-icons/ai';
 import { DiCss3, DiJavascript1, DiPhp } from 'react-icons/di';
 import { FaReact, FaNode } from 'react-icons/fa';
 import { SiTypescript,SiPostgresql,SiMysql } from 'react-icons/si';
+import { BsFillBootstrapFill } from 'react-icons/bs';
 
 import CardObjective from '../CardObjective';
 
-export default function SectionInfo() {
+export default function SectionLanguages() {
   return (
     <Section>
       <TitleSection>
@@ -26,6 +27,7 @@ export default function SectionInfo() {
           <CardObjective titleCard="CSS" element={<DiCss3 size={70} />} changeColor="#00aaff" />
           <CardObjective titleCard="JavaScript" element={<DiJavascript1 size={70} />} changeColor="#d6c530" />
           <CardObjective titleCard="React JS" element={<FaReact size={70} />} changeColor="#3dc8ff" />
+          <CardObjective titleCard="Bootstrap" element={<BsFillBootstrapFill size={70} />} changeColor="#9070db" />
         </ContainFrontBack>
         
         <TitleObjective>Back-End</TitleObjective>

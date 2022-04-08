@@ -34,7 +34,7 @@ export const Card = styled.a`
     transform: scale(1.05);
 
     h1 {
-      color: ${props => props.theme.colors.text};
+      color: ${props => props.theme.colors.secundary};
     }
   }
 `;
@@ -60,7 +60,7 @@ export const ContentTitle = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: ${props => lighten(0.25,props.theme.colors.primary)};
+  color: ${props => props.theme.colors.text};
   transition: all ease 200ms;
   font-size: 28px;
   display: flex;
@@ -70,7 +70,7 @@ export const Title = styled.h1`
 `;
 
 export const TitleMini = styled.span`
-  color: ${props => lighten(0.3,props.theme.colors.primary)};
+  color: ${props => props.theme.colors.text};
   font-size: 12px;
 `;
 

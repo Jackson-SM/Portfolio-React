@@ -16,6 +16,12 @@ export const InfoFooter = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
+
+  @media(max-width:800px){
+    flex-direction: column;
+    align-items:center;
+    gap: 4rem;
+  }
 `;
 
 export const Links = styled.div`
@@ -35,20 +41,20 @@ export const GroupLinks = styled.div`
 
 export const Link = styled.a`
   text-decoration: none;
-  color: ${props => props.theme.colors.secundary};
+  color: ${props => props.theme.colors.text};
   transition: all ease 200ms;
 
   font-size: 13px;
 
   &:hover {
-    color: ${props => props.theme.colors.text};
+    color: ${props => props.theme.colors.secundary};
   }
 `;
 
 export const Contact = styled.form`
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 15px;
   flex-direction: column;
 `;
 
@@ -65,7 +71,7 @@ export const InputContact = styled.input`
   border: none;
   outline: none;
   width: 400px;
-  color: ${props => props.theme.colors.secundary};
+  color: ${props => props.theme.colors.text};
   border-radius: 3px;
   padding: 12px;
   background: ${props => props.theme.colors.background};
@@ -77,18 +83,20 @@ export const InputTextarea = styled.textarea`
   outline: none;
   height:120px;
   background: ${props => props.theme.colors.background};
-  color: ${props => props.theme.colors.secundary};
+  color: ${props => props.theme.colors.text};
   padding: 10px;
+  border: none;
+  border-radius: 5px;
 `;
 
 export const InviteFormContact = styled.button`
   outline: none;
   border: none;
-  padding: 10px 50px;
+  padding: 15px 50px;
   cursor: pointer;
   border-radius: 3px;
   background: ${props => props.theme.title === 'dark' ? lighten(0.1,props.theme.colors.background) : darken(0.25,"white")};
-  color: ${props => props.theme.colors.secundary};
+  color: ${props => props.theme.colors.text};
 
   width: 100%;
 
@@ -96,7 +104,7 @@ export const InviteFormContact = styled.button`
 
   &:hover{
     color: ${props => props.theme.colors.text};
-    background: ${props => props.theme.title === 'dark' ? lighten(0.2,props.theme.colors.background) : darken(0.8,"white")};
+    background: ${props => props.theme.colors.secundary};
   }
 `;
 
@@ -108,6 +116,7 @@ export const TitleForm = styled.h1`
 export const InfoUser = styled.div`
   display: flex;
   gap: 1rem;
+  padding-top: 40px;
 `;
 
 export const BtnSocial = styled.a`
@@ -117,8 +126,13 @@ export const BtnSocial = styled.a`
   transition: all ease 200ms;
 
   &:hover {
-    color: ${props => props.theme.colors.text};
+    color: ${props => props.theme.colors.secundary};
 
     transform: scale(1.05);
   }
+`;
+
+export const TermsConditions = styled.span`
+  color: ${props => props.theme.colors.secundary};
+  font-size: 13px;
 `;

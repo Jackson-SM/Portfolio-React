@@ -55,7 +55,7 @@ export const ContainerApresentation = styled.div`
 
   h1 {
     font-size: 45px;
-    color: ${props => props.theme.colors.text};
+    color: ${props => props.theme.colors.primary};
     display: flex;
     align-items: center;
     gap: 10px;
@@ -67,7 +67,7 @@ export const ContainerApresentation = styled.div`
 
   h2 {
     font-size: 20px;
-    color: ${props => props.theme.colors.secundary};
+    color: ${props => props.theme.colors.text};
     display: block;
 
     @media(max-width: 900px){
@@ -77,7 +77,7 @@ export const ContainerApresentation = styled.div`
 
   p {
     font-size: 14px;
-    color: ${props => props.theme.colors.secundary};
+    color: ${props => props.theme.colors.text};
 
     @media(max-width: 900px) {
       font-size: 12px;

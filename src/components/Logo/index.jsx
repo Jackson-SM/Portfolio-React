@@ -1,10 +1,10 @@
 import React from 'react';
 import { LogoText } from './styles';
 
-import { IoLogoXing } from 'react-icons/io';
+import { GiCometSpark } from 'react-icons/gi';
 
 export default function Logo() {
   return (
-    <LogoText><IoLogoXing />Pinnacle</LogoText>
+    <LogoText><GiCometSpark size={40} />Portfólio</LogoText>
   );
 }

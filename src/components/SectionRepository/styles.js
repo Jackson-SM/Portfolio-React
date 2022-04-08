@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { transparentize } from 'polished';
 
 export const Section = styled.section`
-  background: linear-gradient(to bottom, ${props => props.theme.colors.background},${props => transparentize(0.75,props.theme.colors.text)},${props => props.theme.colors.background});
+  background: linear-gradient(to bottom, ${props => props.theme.colors.background},${props => transparentize(0.75,props.theme.colors.primary)},${props => props.theme.colors.background});
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -30,10 +30,10 @@ export const TitleSection = styled.div`
 
 export const Title = styled.h1`
   font-size: 26px;
-  color: ${props => props.theme.colors.secundary};
+  color: ${props => props.theme.colors.primary};
 `;
 
 export const Decription = styled.p`
   font-size: 14px;
-  color: ${props => props.theme.colors.secundary};
+  color: ${props => props.theme.colors.primary};
 `;
