@@ -9,7 +9,7 @@ export const Card = styled.a`
   margin: 0 auto;
   text-decoration: none;
 
-  background: ${props => props.theme.title === 'dark' ? lighten(0.05,props.theme.colors.background) : darken(0.1,"white")};
+  background: ${props => props.theme.title === 'dark' ? lighten(0.05,props.theme.colors.background) : darken(0.15,"white")};
   padding: 20px;
 
   border-radius: 15px;
@@ -22,7 +22,7 @@ export const Card = styled.a`
 
   transition: all ease 200ms;
 
-  box-shadow: 0 0 20px 1px rgba(40,40,40,0.4);
+  box-shadow: 0 0 10px 1px rgba(40,40,40,0.4);
 
   gap: 1rem;
 

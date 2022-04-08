@@ -4,7 +4,7 @@ import { darken, lighten } from 'polished';
 export const Card = styled.div`
   height: 150px;
   width: 200px;
-  background: ${props => props.title == 'dark' ? lighten(0.03,props.theme.colors.background) : darken(0.1,"white")};
+  background: ${props => props.theme.title === 'dark' ? lighten(0.03,props.theme.colors.background) : darken(0.1,"white")};
   border-radius: 3px;
   margin: 0 auto;
   transition: all ease 200ms;

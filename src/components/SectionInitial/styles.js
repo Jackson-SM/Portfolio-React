@@ -6,7 +6,7 @@ export const SectionContent = styled.section`
   gap: 3rem;
   align-items: center;
   justify-content: center;
-  padding-top: 20px;
+  padding: 30px 0 80px 0;
 
   height: 100%;
 
