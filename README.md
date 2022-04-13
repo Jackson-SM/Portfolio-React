@@ -1,7 +1,15 @@
 # Projeto de Portfólio
 - Utilizando React
 - Consumindo Api do github
+- Template React Javascript
+- CSS Moderno
+#
 
+### Comandos:
+- Iniciar: npm start
+#
+
+##### Imagens do Projeto:
 <div>
   <img height="280px" src="https://github.com/Jackson-SM/Portfolio-React/blob/master/public/readme/portfolio1.png?raw=true" />
   <img height="280px" src="https://github.com/Jackson-SM/Portfolio-React/blob/master/public/readme/portfolio2.png?raw=true" />
@@ -10,6 +18,7 @@
   <img height="280px" src="https://github.com/Jackson-SM/Portfolio-React/blob/master/public/readme/portfolio5.png?raw=true" />
  </div>
 
+### Linguagens e Frameworks Utilizados:
 <div style="display: inline_block"><br>
   <img align="center" alt="Jack-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
   <img align="center" alt="Jack-React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
@@ -17,3 +26,5 @@
   <img align="center" alt="Jack-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
   <img align="center" alt="Jack-Node" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg">
 </div>
+
+#
